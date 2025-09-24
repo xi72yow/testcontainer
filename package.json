@@ -1,0 +1,25 @@
+{
+  "name": "testcontainer",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --env-file=.env node_modules/.bin/jest --verbose --forceExit",
+    "test:simple": "node --env-file=.env node_modules/.bin/jest tests/k3s-simple.test.js --verbose --forceExit",
+    "test:module": "jest tests/k3s-module.test.js --verbose --forceExit",
+    "test:basic": "jest tests/k3s.test.js --verbose --forceExit",
+    "test:advanced": "jest tests/k3s-advanced.test.js --verbose --forceExit",
+    "test:helm": "jest tests/k3s-helm.test.js --verbose --forceExit",
+    "test:watch": "jest --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@testcontainers/k3s": "^11.5.1",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^24.3.1",
+    "jest": "^30.1.3",
+    "testcontainers": "^11.5.1"
+  }
+}
